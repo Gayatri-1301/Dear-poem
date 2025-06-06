@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Dear Poem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            background-color: #faf6f0;
+            color: #3d3d3d;
+        }
+
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e8d8c6' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .poem-line {
+            border-left: 3px solid #c9a87c;
+            padding-left: 1.5rem;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .rotate-1 {
+            transform: rotate(-1deg);
+        }
+
+        .rotate-2 {
+            transform: rotate(2deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white bg-opacity-80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div>
+                    <span class="title-font text-2xl text-amber-900">Dear Poem</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="./index.html" class="text-amber-900 hover:text-amber-700 transition">Home</a>
+                    <a href="./read.html" class="text-amber-900 hover:text-amber-700 transition">Poems</a>
+                    <a href="./submitpage.html" class="text-amber-900 hover:text-amber-700 transition">Submit</a>
+                    <a href="./store.html" class="text-amber-900 hover:text-amber-700 transition">Bookstore</a>
+                    <a href="./about.html" class="text-amber-900 hover:text-amber-700 transition font-bold">About</a>
+                </div>
+                <button class="md:hidden text-amber-900">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Static Mobile Menu -->
+            <div class="md:hidden flex flex-col space-y-4 mt-4">
+                <a href="./index.html" class="text-amber-900 hover:text-amber-700 transition">Home</a>
+                <a href="./read.html" class="text-amber-900 hover:text-amber-700 transition">Poems</a>
+                <a href="./submitpage.html" class="text-amber-900 hover:text-amber-700 transition">Submit</a>
+                <a href="./store.html" class="text-amber-900 hover:text-amber-700 transition">Bookstore</a>
+                <a href="./about.html" class="text-amber-900 hover:text-amber-700 transition font-bold">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Page Header -->
+            <div class="text-center mb-12 hero-pattern py-16 fade-in">
+                <h2 class="title-font text-3xl md:text-4xl text-amber-900 mb-4">About Dear Poem</h2>
+                <p class="text-lg text-amber-800 max-w-2xl mx-auto">
+                    A community where poetry lovers and creators come together to share, celebrate, and inspire through the power of words.
+                </p>
+            </div>
+
+            <!-- Mission Section -->
+            <section class="mb-16 fade-in">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="title-font text-2xl text-amber-900 mb-4">Our Mission</h3>
+                        <p class="text-amber-800 mb-4 poem-line">
+                            Founded in 2018, Dear Poem is dedicated to fostering a love for poetry by providing a platform for poets to share their work and for readers to discover new voices. We believe poetry has the power to connect hearts and spark meaningful conversations.
+                        </p>
+                        <p class="text-amber-800">
+                            Whether you're a seasoned poet or just starting, our community welcomes all who find solace, joy, or inspiration in verse.
+                        </p>
+                    </div>
+                    <div class="rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Open poetry book" class="w-full h-64 object-cover rounded-lg shadow-sm">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section class="mb-16 fade-in">
+                <h3 class="title-font text-2xl text-amber-900 text-center mb-8">Meet Our Team</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-amber-50 rounded-lg p-6 text-center rotate-1 hover:rotate-0 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Emma Carter" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h4 class="title-font text-lg text-amber-900 mb-2">Emma Carter</h4>
+                        <p class="text-amber-800 mb-2">Founder & Editor</p>
+                        <p class="text-gray-700 text-sm">
+                            Emma is a poet and literature enthusiast with a passion for building communities around creative expression.
+                        </p>
+                    </div>
+                    <div class="bg-amber-50 rounded-lg p-6 text-center rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="James Patel" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h4 class="title-font text-lg text-amber-900 mb-2">James Patel</h4>
+                        <p class="text-amber-800 mb-2">Content Curator</p>
+                        <p class="text-gray-700 text-sm">
+                            James curates our collections, ensuring diverse voices and styles shine through in every poem we share.
+                        </p>
+                    </div>
+                    <div class="bg-amber-50 rounded-lg p-6 text-center rotate-1 hover:rotate-0 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sarah Lin" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h4 class="title-font text-lg text-amber-900 mb-2">Sarah Lin</h4>
+                        <p class="text-amber-800 mb-2">Community Manager</p>
+                        <p class="text-gray-700 text-sm">
+                            Sarah connects our poets and readers, fostering a warm and inclusive space for all.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="bg-amber-100 rounded-lg p-8 text-center fade-in">
+                <h3 class="title-font text-2xl text-amber-900 mb-4">Join Our Community</h3>
+                <p class="text-lg text-amber-800 mb-6 max-w-2xl mx-auto">
+                    Subscribe to our newsletter for monthly poetry picks, writing prompts, and updates from Dear Poem.
+                </p>
+                <form class="max-w-md mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg bg-white border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-700">
+                        <button type="submit" class="px-6 py-3 bg-amber-800 text-white rounded-lg hover:bg-amber-700 transition">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-950 text-amber-200 py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="title-font text-2xl text-amber-100 mb-4">Dear Poem</h3>
+                    <p class="max-w-xs">
+                        A sanctuary for poets and poetry lovers since 2018.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="title-font text-amber-100 mb-4">Explore</h4>
+                        <ul class="space-y-2">
+                            <li><a href="./read.html" class="hover:text-amber-100 transition">Collections</a></li>
+                            <li><a href="./read.html" class="hover:text-amber-100 transition">Featured Poets</a></li>
+                            <li><a href="./submitpage.html" class="hover:text-amber-100 transition">Writing Prompts</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="title-font text-amber-100 mb-4">Connect</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-amber-100 transition">Instagram</a></li>
+                            <li><a href="#" class="hover:text-amber-100 transition">Twitter</a></li>
+                            <li><a href="#" class="hover:text-amber-100 transition">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="title-font text-amber-100 mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-amber-100 transition">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-amber-100 transition">Terms</a></li>
+                            <li><a href="#" class="hover:text-amber-100 transition">Copyright</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-12 pt-8 text-center text-sm">
+                <p>© 2023 Dear Poem. All rights reserved. Crafted with <i class="fas fa-heart text-amber-500"></i> and stanzas.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

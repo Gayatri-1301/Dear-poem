@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Bookstore | Dear Poem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Crimson Pro', serif;
+            background-color: #faf6f0;
+            color: #3d3d3d;
+        }
+        
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e8d8c6' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .poem-line {
+            border-left: 3px solid #c9a87c;
+            padding-left: 1.5rem;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .rotate-1 {
+            transform: rotate(-1deg);
+        }
+        
+        .rotate-2 {
+            transform: rotate(2deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white bg-opacity-80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div>
+                    <span class="title-font text-2xl text-amber-900">Dear Poem</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="./index.html" class="text-amber-900 hover:text-amber-700 transition">Home</a>
+                    <a href="./read.html" class="text-amber-900 hover:text-amber-700 transition">Poems</a>
+                    <a href="./submitpage.html" class="text-amber-900 hover:text-amber-700 transition">Submit</a>
+                    <a href="./store.html" class="text-amber-900 hover:text-amber-700 transition font-bold">Bookstore</a>
+                    <a href="./about.html" class="text-amber-900 hover:text-amber-700 transition">About</a>
+                </div>
+                <button class="md:hidden text-amber-900">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Static Mobile Menu -->
+            <div class="md:hidden flex flex-col space-y-4 mt-4">
+                <a href="./index.html" class="text-amber-900 hover:text-amber-700 transition">Home</a>
+                <a href="./read.html" class="text-amber-900 hover:text-amber-700 transition">Poems</a>
+                <a href="./submitpage.html" class="text-amber-900 hover:text-amber-700 transition">Submit</a>
+                <a href="./store.html" class="text-amber-900 hover:text-amber-700 transition font-bold">Bookstore</a>
+                <a href="./about.html" class="text-amber-900 hover:text-amber-700 transition">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Page Header -->
+            <div class="text-center mb-12 hero-pattern py-16 fade-in">
+                <h2 class="title-font text-3xl md:text-4xl text-amber-900 mb-4">Poetry Bookstore</h2>
+                <p class="text-lg text-amber-800 max-w-2xl mx-auto">
+                    Discover beautiful collections of poetry from our featured authors. Each purchase supports independent poets.
+                </p>
+            </div>
+            
+            <!-- Search and Filter -->
+            <div class="mb-8 bg-amber-50 border border-amber-200 rounded-lg p-6 fade-in">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search books..." 
+                               class="w-full pl-10 pr-4 py-2 rounded-lg bg-white border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-700 placeholder-amber-300">
+                        <i class="fas fa-search absolute left-3 top-2.5 text-amber-700"></i>
+                    </div>
+                    <select class="w-full px-4 py-2 rounded-lg border border-amber-700 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <option value="">All Categories</option>
+                        <option value="love">Love Poetry</option>
+                        <option value="nature">Nature Poetry</option>
+                        <option value="modern">Modern Poetry</option>
+                        <option value="classic">Classic Poetry</option>
+                    </select>
+                    <select class="w-full px-4 py-2 rounded-lg border border-amber-700 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <option value="">Sort By</option>
+                        <option value="newest">Newest</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Book Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
+                <!-- Book 1 -->
+                <div class="bg-white rounded-lg shadow-sm p-4 rotate-2 hover:rotate-0 transition-transform duration-500 fade-in">
+                    <div class="w-full h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Whispers of the Heart" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="title-font text-xl text-amber-900 mb-1">Whispers of the Heart</h3>
+                    <p class="text-amber-800 mb-3">Sarah J. Bennett</p>
+                    <p class="text-gray-700 mb-4 line-clamp-2">A collection of tender poems exploring love, loss, and the quiet moments in between.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-amber-800">$14.99</span>
+                        <span class="px-4 py-2 text-amber-800 font-medium">See Details Below</span>
+                    </div>
+                </div>
+                
+                <!-- Book 2 -->
+                <div class="bg-white rounded-lg shadow-sm p-4 rotate-1 hover:rotate-0 transition-transform duration-500 fade-in">
+                    <div class="w-full h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="The Language of Trees" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="title-font text-xl text-amber-900 mb-1">The Language of Trees</h3>
+                    <p class="text-amber-800 mb-3">Michael Chen</p>
+                    <p class="text-gray-700 mb-4 line-clamp-2">Nature-inspired verses that speak to the soul, celebrating the earth's quiet wisdom.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-amber-800">$12.99</span>
+                        <span class="px-4 py-2 text-amber-800 font-medium">See Details Below</span>
+                    </div>
+                </div>
+                
+                <!-- Book 3 -->
+                <div class="bg-white rounded-lg shadow-sm p-4 rotate-2 hover:rotate-0 transition-transform duration-500 fade-in">
+                    <div class="w-full h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1535905557558-afc4877a26fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Midnight Verses" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="title-font text-xl text-amber-900 mb-1">Midnight Verses</h3>
+                    <p class="text-amber-800 mb-3">Elena Rodriguez</p>
+                    <p class="text-gray-700 mb-4 line-clamp-2">Poems written in the quiet hours, exploring dreams, solitude, and the magic of night.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-amber-800">$16.99</span>
+                        <span class="px-4 py-2 text-amber-800 font-medium">See Details Below</span>
+                    </div>
+                </div>
+                
+                <!-- Book 4 -->
+                <div class="bg-white rounded-lg shadow-sm p-4 rotate-1 hover:rotate-0 transition-transform duration-500 fade-in">
+                    <div class="w-full h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Fragments of Light" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="title-font text-xl text-amber-900 mb-1">Fragments of Light</h3>
+                    <p class="text-amber-800 mb-3">James Wilson</p>
+                    <p class="text-gray-700 mb-4 line-clamp-2">A journey through grief and healing, finding beauty in brokenness.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-amber-800">$13.99</span>
+                        <span class="px-4 py-2 text-amber-800 font-medium">See Details Below</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Book Details Section -->
+            <section class="bg-amber-100 rounded-lg p-8 mb-12 fade-in">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Book Cover -->
+                    <div>
+                        <div class="w-full h-auto rounded-lg overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Whispers of the Heart" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-bold text-amber-800">$14.99</span>
+                            <span class="px-6 py-3 text-amber-800 font-medium">Purchase Info Below</span>
+                        </div>
+                    </div>
+                    <!-- Book Details -->
+                    <div>
+                        <h2 class="title-font text-2xl md:text-3xl text-amber-900 mb-2">Whispers of the Heart</h2>
+                        <p class="text-amber-800 mb-4">Sarah J. Bennett</p>
+                        <div class="mb-6">
+                            <h3 class="title-font text-lg text-amber-900 mb-2">Description</h3>
+                            <p class="text-gray-700">
+                                A collection of tender poems exploring love, loss, and the quiet moments in between. Sarah J. Bennett's debut collection has touched thousands of readers with its raw honesty and lyrical beauty. These poems navigate the complexities of human emotion with grace and precision.
+                            </p>
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="title-font text-lg text-amber-900 mb-2">Sample Poem</h3>
+                            <div class="poem-line text-gray-700 italic">
+                                The heart speaks in whispers,<br>
+                                not shouts—<br>
+                                a rustle of leaves,<br>
+                                the softest touch of light<br>
+                                on morning skin.<br><br>
+                                Listen closely,<br>
+                                for what it cannot say aloud<br>
+                                it writes in the quiet spaces<br>
+                                between breaths.
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="title-font text-lg text-amber-900 mb-2">Reviews</h3>
+                            <div class="space-y-4">
+                                <div class="poem-line bg-amber-50 p-4 rounded-lg">
+                                    <div class="flex items-center mb-2">
+                                        <div class="flex text-yellow-400 mr-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="text-amber-800 font-medium">Sarah M.</span>
+                                    </div>
+                                    <p class="text-gray-700">"This collection touched my soul. I've read it three times already and find new meaning each time."</p>
+                                </div>
+                                <div class="poem-line bg-amber-50 p-4 rounded-lg">
+                                    <div class="flex items-center mb-2">
+                                        <div class="flex text-yellow-400 mr-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <span class="text-amber-800 font-medium">David K.</span>
+                                    </div>
+                                    <p class="text-gray-700">"The poet's words paint such vivid images. I can almost smell the forest when reading 'The Language of Trees'."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Pagination -->
+            <div class="flex justify-center fade-in">
+                <nav class="flex items-center space-x-2">
+                    <button class="px-3 py-1 rounded-lg border border-amber-700 bg-white text-amber-800 hover:bg-amber-100 transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="px-3 py-1 rounded-lg bg-amber-800 text-white hover:bg-amber-700 transition">1</button>
+                    <button class="px-3 py-1 rounded-lg border border-amber-700 bg-white text-amber-800 hover:bg-amber-100 transition">2</button>
+                    <button class="px-3 py-1 rounded-lg border border-amber-700 bg-white text-amber-800 hover:bg-amber-100 transition">3</button>
+                    <button class="px-3 py-1 rounded-lg border border-amber-700 bg-white text-amber-800 hover:bg-amber-100 transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-950 text-amber-200 py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="title-font text-2xl text-amber-100 mb-4">Dear Poem</h3>
+                    <p class="max-w-xs">
+                        A sanctuary for poets and poetry lovers since 2018.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="title-font text-amber-100 mb-4">Explore</h4>
+                        <ul class="space-y-2">
+                            <li><a href="./read.html" class="hover:text-amber-100 transition">Collections</a></li>
+                            <li><a href="./read.html" class="hover:text-amber-100 transition">Featured Poets</a></li>
+                            <li><a href="./submitpage.html" class="hover:text-amber-100 transition">Writing Prompts</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="title-font text-amber-100 mb-4">Connect</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-amber-100 transition">Instagram</a></li>
+                            <li><a href="#" class="hover:text-amber-100 transition">Twitter</a></li>
+                            <li><a href="#" class="hover:text-amber-100 transition">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="title-font text-amber-100 mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-amber-100 transition">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-amber-100 transition">Terms</a></li>
+                            <li><a href="#" class="hover:text-amber-100 transition">Copyright</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-12 pt-8 text-center text-sm">
+                <p>© 2023 Dear Poem. All rights reserved. Crafted with <i class="fas fa-heart text-amber-500"></i> and stanzas.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
